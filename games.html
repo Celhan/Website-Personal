@@ -243,7 +243,15 @@
             timerDisplay.textContent = 'Time: ' + timeLeft + 's';
         }
     </script>
-
+    <body>
+        <button onclick="reloadPage()">Restart</button>
+    
+        <script>
+            function reloadPage() {
+                location.reload();
+            }
+        </script>
+    </body>
 </body>
 </section>
 <section id="Tic">
@@ -345,6 +353,16 @@
 
         cells.forEach(cell => cell.addEventListener('click', handleClick));
     </script>
+    
+    <body>
+        <button onclick="reloadPage()">Restart</button>
+    
+        <script>
+            function reloadPage() {
+                location.reload();
+            }
+        </script>
+    </body>
 </body>
 </section>
 <style>
