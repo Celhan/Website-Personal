@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Pelajar</title>
+    <style>
+        /* CSS Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #555;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.main {
+    padding: 2rem 0;
+}
+
+h1 {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #4CAF50;
+}
+
+h2 {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #4CAF50;
+}
+
+.section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.section:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.projects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.projects img:hover {
+    transform: scale(1.05);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    transition: flex-direction 0.3s ease;
+}
+
+.skill-group {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #e2e2e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s ease, transform 0.5s ease;
+}
+
+.skill-circle:hover {
+    background: #4CAF50;
+    transform: scale(1.1);
+}
+
+.skill-circle h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: white;
+    z-index: 1;
+}
+
+.skill-circle .percentage {
+    position: absolute;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.organizations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.organization {
+    flex: 1;
+    background: #e2e2e2;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.organization:hover {
+    background-color: #d0d0d0;
+}
+
+.contact table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.contact th, .contact td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.contact th {
+    background-color: #f4f4f4;
+}
+
+/* CSS untuk Responsif */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-group {
+        max-width: 100%;
+    }
+
+    .organization {
+        flex: 1 1 100%;
+    }
+}
+
+/* Animasi dan Transisi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.section, .organization, .skill-circle {
+    animation: fadeIn 1s ease-in-out;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #555;
+}
+
+     .navigation {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      background-color: #ffffff;
+      padding: 15px;
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: #f9aaff;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .navigation a:hover {
+      color: #ff97fd;
+    }
+
+    /* Medium screens */
+    @media all and (max-width: 800px) {
+      .navigation {
+        justify-content: space-around;
+      }
+    }
+
+    /* Small screens */
+    @media all and (max-width: 500px) {
+      .navigation {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.4); /* Opacity 40% */
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.menu-icon {
+    font-size: 24px;
+    color: white;
+}
+
+.menu {
+    display: none; /* Hide menu by default */
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Opacity 40% */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Show the menu when 'show' class is added */
+.menu.show {
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <!-- navigation-->
+    <body>
+        <nav class="navigation">
+           <a href="index.html">Home</a>
+           <a HREF="PPT.html">PPT</a>
+           <a href="games.html">Games section</a>
+        </nav>
+      </body>
+
+    <!-- Titik Tiga Navigasi -->
+      <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+        <div class="menu" id="menu">
+            <a href="#about-me">About Me</a>
+            <a href="#Skills">skills</a>
+            <a href="#Organisasi">Organisasi</a>
+            <a href="#projek">projek</a>
+         </div>
+     </div>
+
+    <header>
+        <div class="container">
+            <h1>Portfolio</h1>
+        </div>
+    </header>
+<section id="about-me">
+    <div class="container">
+        <div class="main">
+            <section class="section about">
+                <h2>Tentang Saya</h2>
+                <p>Halo! Nama saya Hansen Ferdinando Yosua Pontoh, seorang pelajar dengan minat di bidang TKJ. Saya suka di bidang web development dan videography dan selalu mencari peluang untuk belajar dan berkembang.</p>
+
+                <!-- Tabel Informasi Pribadi -->
+                <table>
+                    <tr>
+                        <th>Nama :</th>
+                        <td>Hansen Ferdinando Yosua Pontoh</td>
+                    </tr>
+                    <tr>
+                        <th>Umur :</th>
+                        <td>16 tahun</td>
+                    </tr>
+                    <tr>
+                        <th>Pendidikan :</th>
+                        <td>SMK Teknologi Komputer Jaringan (TKJ)</td>
+                    </tr>
+                </table>
+            </section>
+</section>
+<section id="Skills">
+            <section class="section skills">
+                <h2>Kemampuan Bahasa Pemrograman</h2>
+                <div class="skill-group">
+                    <h3>HTML</h3>
+                    <div class="skill-circle">
+                        <div class="percentage">90%</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>CSS</h3>
+                    <div class="skill-circle">
+                        <div class="percentage">50%</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Python</h3>
+                    <div class="skill-circle">
+                        <div class="percentage">10%</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section skills">
+                <h2>Kemampuan Videografi dan Fotografi</h2>
+                <div class="skill-group">
+                    <h3>Fotografi</h3>
+                    <div class="skill-circle">
+                        <div class="percentage">90%</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Videografi</h3>
+                    <div class="skill-circle">
+                        <div class="percentage">80%</div>
+                    </div>
+                </div>    
+            </section>
+</section>
+<section id="Organisasi">         
+              <section class="section organizations">
+                <h2>Organisasi</h2>
+                <div class="organization">
+                    <h3>Persekutuan Doa</h3>
+                    <p>Pada tahun 2021 - 2022 tepatnya saat saya masih SMP saya mengikuti organisasi PD (Persekutuan Doa) dan menjadi pemusik. Saya mampu memainkan alat musik saxophone. Pada tahun 2023-2024 saya kembali bergabung dengan PD dan menjadi pemusik juga.</p>
+                </div>
+                <!-- Tambahkan lebih banyak organisasi jika perlu -->
+            </section>
+</section>
+<section id="projek">               
+
+            <section class="section projects">
+                <h2>Proyek Saya</h2>
+                <article>
+                    <h3>Proyek 1</h3>
+                    <img src="project1.jpg" alt="Screenshot Proyek 1">
+                    <p>Saya memiliki satu proyek yaitu membuat website ini. Dalam pembuatan website ini saya menggunakan beberapa bahasa pemrograman seperti HTML, CSS, dan Python.</p>
+                </article>
+                <article>
+                    <h3>Proyek 2</h3>
+                    <p>Saya juga memiliki proyek short film. Dalam short film ini saya menjadi kameramen dan editor.</p>
+                </article>
+            </section>
+</section>           
+
+            <section class="section contact">
+                <h2>Kontak</h2>
+                <p>Jika Anda ingin menghubungi saya, silakan kirim email ke <a href="mailto:dbdbjkhb101@gmail.com">dbdbjkhb101@gmail.com</a> atau telepon di <a href="tel:081221752006">081221752006</a>.</p>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Portfolio Pelajar. All rights reserved.</p>
+    </footer>
+    <script>
+              function toggleMenu() {
+              var menu = document.getElementById('menu');
+              menu.classList.toggle('show');
+              }
+          </script>
+</body>
+</html>
