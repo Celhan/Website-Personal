@@ -8,13 +8,154 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <style>
+        /* Animasi fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animasi slide-up */
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Gaya navigasi */
+        .navigation {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            background-color: #ffffff;
+            padding: 15px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #f9aaff;
+            padding: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #ff97fd;
+            transform: scale(1.1); /* Efek zoom saat di-hover */
+        }
+
+        /* Medium screens */
+        @media all and (max-width: 800px) {
+            .navigation {
+                justify-content: space-around;
+            }
+        }
+
+        /* Small screens */
+        @media all and (max-width: 500px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Reset margin and padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background color and text color */
+        body {
+            background: linear-gradient(to right, #ffb2f6, #f04aff);
+            background-color: #ffa3f3;
+            color: white;
+            text-align: center;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.4); /* Opacity 40% */
+            border-radius: 7px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            color: white;
+        }
+
+        .menu {
+            display: none; /* Hide menu by default */
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* Opacity 40% */
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Show the menu when 'show' class is added */
+        .menu.show {
+            display: block;
+        }
+
+        /* Section styling */
+        section {
+            border: 2px solid #ffffff; /* Bingkai putih di sekitar section */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lembut di sekitar section */
+            max-width: 800px; /* Batasi lebar kontainer */
+            margin: 20px auto; /* Pusatkan kontainer dan beri margin atas-bawah */
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Latarnya transparan */
+            border-radius: 8px; /* Sudut membulat */
+            animation: fadeIn 1.5s ease-out, slideUp 1s ease-out; /* Animasi saat muncul */
+        }
+
+        p {
+            max-height: 150px; /* Batasi tinggi teks */
+            overflow-y: auto; /* Tambahkan scrollbar vertikal jika diperlukan */
+            text-align: justify; /* Rata kiri-kanan */
+        }
+
+        a {
+            color: lightblue; /* Warna tautan */
+            text-decoration: none; /* Hapus garis bawah pada tautan */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Garis bawah saat tautan dihover */
+        }
+    </style>
+
+    
 
 
 <!-- navigation-->
 <body>
     <nav class="navigation">
        <a href="index.html">Home</a>
-       <a href="portofolio.html">portofilio</a>
+       <a href="portofolio.html">portofolio</a>
        <a href="PPT.html">PPT</a>
   </body>
 
