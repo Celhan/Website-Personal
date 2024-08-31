@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Anda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Titik Tiga Navigasi -->
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+        <div class="menu" id="menu">
+            <a href="#about">About Me</a>
+            <a href="#activities">Yang Saya Lakukan</a>
+            <a href="#education">Pendidikan</a>
+        </div>
+    </div>
+
+    <!-- My Name -->
+    <section id="Judul">
+        <h1>Hansen Ferdinando Yosua Pontoh</h1>
+    </section>
+
+    <!-- Section About Me -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Nama saya Hansen Ferdinando Yosua Pontoh Biasanya di panggil Hansen, sekarang umur saya 16 tahun Saat ini saya masih menjalani 
+            pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya, saya memiliki beberapa
+        keterampilan dan keahilan antara lain Pengembangan Web: HTML, CSS, dan JavaScript Fotography vidiography: Cameramen dan vidio editor
+        Musik: Menguasai beberapa alat musik saxophone dan gitar saya juga aktiv dalam kegiatan oganisasi dan Kegiatan Ekstrakurikuler
+        aktif dalam organisai PD(persekutuan doa) sekolah di bidang Pemusik dan exkstrakulikuler basket</p>
+    </section>
+
+    <!-- Gambar Lucu -->
+    <div class="fun-image-container">
+        <img src="fun-image.png" alt="Gambar Lucu" class="fun-image"> <!-- Ganti dengan jalur gambar lucu Anda -->
+    </div>
+
+
+    <!-- Section Yang Saya Lakukan -->
+    <section id="activities">
+        <h1>Yang Saya Lakukan</h1>
+        <p>Saat ini banyak yang sedang say lakukan salah satunya adalah project membuat website ini. saya juga ada project membuat short film
+            Yang berjudul "Sad Boy" yang nanti akan di upload satu youtube yang memang belum saya buat jadi Coming soon yaaa
+        </p>
+    </section>
+
+    <!-- Section Pendidikan -->
+    <section id="education">
+        <h1>Pendidikan</h1>
+        <p>pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya dan saya mengambil konsentrasi keahlihan
+        TKJ ( teknik komputer jaringan) yang mengajarkan Hardware Software Jaringan dll salah satu skill yang saya dapatkan ya membuat website 
+    ini.</p>
+    </section>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+<style>
+/* Reset margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Background color and text color */
+body {
+    background: linear-gradient(to right, #ffb2f6, #f04aff);
+    background-color: #ffa3f3;
+    color: white;
+    text-align: center;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.4); /* Opacity 40% */
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.menu-icon {
+    font-size: 24px;
+    color: white;
+}
+
+.menu {
+    display: none; /* Hide menu by default */
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.4); /* Opacity 40% */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Show the menu when 'show' class is added */
+.menu.show {
+    display: block;
+}
+
+/* Section styling */
+section {
+            border: 2px solid #ffffff; /* Bingkai putih di sekitar section */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lembut di sekitar section */
+            max-width: 800px; /* Batasi lebar kontainer */
+            margin: 20px auto; /* Pusatkan kontainer dan beri margin atas-bawah */
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Latarnya transparan */
+            border-radius: 8px; /* Sudut membulat */
+        }
+
+        p {
+            max-height: 150px; /* Batasi tinggi teks */
+            overflow-y: auto; /* Tambahkan scrollbar vertikal jika diperlukan */
+            text-align: justify; /* Rata kiri-kanan */
+        }
+
+        a {
+            color: lightblue; /* Warna tautan */
+            text-decoration: none; /* Hapus garis bawah pada tautan */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Garis bawah saat tautan dihover */
+        }
+    padding: 100px 20px;
+    margin-top: 60px; /* To provide space from navbar */
+
+    /* Gambar Lucu */
+.fun-image-container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.fun-image {
+    width: 200px; /* Sesuaikan ukuran gambar lucu */
+    border-radius: 10px; /* Sudut membulat pada gambar */
+}
+
+/* Responsive design for mobile */
+@media screen and (max-width: 600px) {
+    .navbar {
+        right: 5px;
+        top: 5px;
+        padding: 5px;
+    }
+
+    section {
+        padding: 60px 10px;
+    }
+
+    .runner {
+        width: 80px;
+    }
+}
+</style>
