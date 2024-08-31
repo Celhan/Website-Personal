@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Anda</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+<!-- navigation-->
+<body>
+    <nav class="navigation">
+       <a href="index.html">Home</a>
+       <a href="PPT.html">PPT</a>
+       <a href="au ah.html">Games</a>
+  </body>
+
+<!-- Titik Tiga Navigasi -->
+  <div class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+    <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+       <a href="PPT.html">PPT</a>
+       <a href="au ah.html">Games</a>
+     </div>
+ </div>
+
+ <script>
+    function toggleMenu() {
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+    }
+</script>
+<section id="click-game">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Button Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #score, #timer {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click the Button Game</h1>
+    <button id="clickButton">Click me!</button>
+    <div id="score">Score: 0</div>
+    <div id="timer">Time: 10s</div>
+
+    <script>
+        let score = 0;
+        let timeLeft = 10;
+        let gameStarted = false;
+        const button = document.getElementById('clickButton');
+        const scoreDisplay = document.getElementById('score');
+        const timerDisplay = document.getElementById('timer');
+
+        button.addEventListener('click', () => {
+            if (!gameStarted) {
+                gameStarted = true;
+                startTimer();
+            }
+            score++;
+            scoreDisplay.textContent = 'Score: ' + score;
+        });
+
+        function startTimer() {
+            const countdown = setInterval(() => {
+                timeLeft--;
+                timerDisplay.textContent = 'Time: ' + timeLeft + 's';
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    endGame();
+                }
+            }, 1000);
+        }
+
+        function endGame() {
+            alert('Time is up! Your final score is: ' + score);
+            score = 0;
+            timeLeft = 10;
+            gameStarted = false;
+            scoreDisplay.textContent = 'Score: ' + score;
+            timerDisplay.textContent = 'Time: ' + timeLeft + 's';
+        }
+    </script>
+
+</body>
+</section>
+<section id="Tic-Tac-Toe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #ffffff;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        td {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ffffff;
+            text-align: center;
+            font-size: 36px;
+            cursor: pointer;
+        }
+        td:hover {
+            background-color: ffrgba(255, 153, 0, 0.895);
+        }
+        #message {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <table>
+        <tr>
+            <td data-index="0"></td>
+            <td data-index="1"></td>
+            <td data-index="2"></td>
+        </tr>
+        <tr>
+            <td data-index="3"></td>
+            <td data-index="4"></td>
+            <td data-index="5"></td>
+        </tr>
+        <tr>
+            <td data-index="6"></td>
+            <td data-index="7"></td>
+            <td data-index="8"></td>
+        </tr>
+    </table>
+    <div id="message"></div>
+
+    <script>
+        const cells = document.querySelectorAll('td');
+        const message = document.getElementById('message');
+        let currentPlayer = 'X';
+        let board = ['', '', '', '', '', '', '', '', ''];
+
+        const winPatterns = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ];
+
+        function checkWin() {
+            for (const pattern of winPatterns) {
+                const [a, b, c] = pattern;
+                if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+                    return board[a];
+                }
+            }
+            return null;
+        }
+
+        function handleClick(e) {
+            const index = e.target.dataset.index;
+            if (board[index] || checkWin()) return;
+            board[index] = currentPlayer;
+            e.target.textContent = currentPlayer;
+            const winner = checkWin();
+            if (winner) {
+                message.textContent = `${winner} wins!`;
+                cells.forEach(cell => cell.removeEventListener('click', handleClick));
+            } else if (board.every(cell => cell)) {
+                message.textContent = 'It\'s a draw!';
+            } else {
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            }
+        }
+
+        cells.forEach(cell => cell.addEventListener('click', handleClick));
+    </script>
+</body>
+</section>
+<style>
+         .navigation {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          background-color: #ffffff;
+          padding: 15px;
+        }
+    
+        .navigation a {
+          text-decoration: none;
+          color: #f9aaff;
+          padding: 10px;
+          transition: color 0.3s ease;
+        }
+    
+        .navigation a:hover {
+          color: #ff97fd;
+        }
+    
+        /* Medium screens */
+        @media all and (max-width: 800px) {
+          .navigation {
+            justify-content: space-around;
+          }
+        }
+    
+        /* Small screens */
+        @media all and (max-width: 500px) {
+          .navigation {
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+    /* Reset margin and padding */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Background color and text color */
+    body {
+        background: linear-gradient(to right, #ffb2f6, #f04aff);
+        background-color: #ffa3f3;
+        color: white;
+        text-align: center;
+    }
+    
+    /* Navbar styling */
+    .navbar {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.4); /* Opacity 40% */
+        border-radius: 7px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    
+    .menu-icon {
+        font-size: 24px;
+        color: white;
+    }
+    
+    .menu {
+        display: none; /* Hide menu by default */
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* Opacity 40% */
+        border-radius: 5px;
+        padding: 10px;
+    }
+    
+    .menu a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    /* Show the menu when 'show' class is added */
+    .menu.show {
+        display: block;
+    }
+    
+    /* Section styling */
+    section {
+                border: 2px solid #ffffff; /* Bingkai putih di sekitar section */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lembut di sekitar section */
+                max-width: 800px; /* Batasi lebar kontainer */
+                margin: 20px auto; /* Pusatkan kontainer dan beri margin atas-bawah */
+                padding: 20px;
+                background: rgba(0, 0, 0, 0.5); /* Latarnya transparan */
+                border-radius: 8px; /* Sudut membulat */
+            }
+    
+            p {
+                max-height: 150px; /* Batasi tinggi teks */
+                overflow-y: auto; /* Tambahkan scrollbar vertikal jika diperlukan */
+                text-align: justify; /* Rata kiri-kanan */
+            }
+    
+            a {
+                color: lightblue; /* Warna tautan */
+                text-decoration: none; /* Hapus garis bawah pada tautan */
+            }
+    
+            a:hover {
+                text-decoration: underline; /* Garis bawah saat tautan dihover */
+            }
+       
+        /* Gambar Lucu */
+    .fun-image-container {
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    .fun-image {
+        width: 200px; /* Sesuaikan ukuran gambar lucu */
+        border-radius: 10px; /* Sudut membulat pada gambar */
+    }
+    
+    /* Responsive design for mobile */
+    @media screen and (max-width: 600px) {
+        .navbar {
+            right: 5px;
+            top: 5px;
+            padding: 5px;
+        }
+    
+        section {
+            padding: 60px 10px;
+        }
+    
+        .runner {
+            width: 80px;
+        }
+    }
+    .pdf-container {
+          width: 90%; /* Lebar kontainer untuk perangkat kecil */
+          max-width: 500px; /* Lebar maksimum kontainer */
+          height: 60vh; /* Tinggi kontainer untuk perangkat kecil */
+          margin: 0 auto; /* Pusatkan kontainer */
+        }
+    
+        @media (min-width: 768px) {
+          .pdf-container {
+            height: 80vh; /* Tinggi kontainer untuk perangkat besar */
+            max-width: 500px;
+            width: 70%
+          }
+        }
+        .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #ffc1f0;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .button:hover {
+        background-color: #ffa5e8;
+    }
+    
+    .tic-tac-toe{
+        margin-top: 10px;
+    }
+
+    .click-game{
+        margin-bottom: 10px;
+    }
+    
+    
+    </style>
