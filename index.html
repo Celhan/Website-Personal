@@ -1,88 +1,92 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nama Anda</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- navigation-->
-    <body>
-        <nav class="navigation">
-          <a href="#about">About</a>
-          <a href="#activitie">Yang saya lakukan</a>
-          <a href="#education">pendidikan</a>
-        </nav>
-      </body>
+  </head>
+  <body style="background-image: url('background.jpg');">
 
-    <!-- Titik Tiga Navigasi -->
-    <div class="navbar">
-        <div class="menu-icon" onclick="toggleMenu()">⋮</div>
-        <div class="menu" id="menu">
-            <a href="#about">About Me</a>
-            <a href="#activities">Yang Saya Lakukan</a>
-            <a href="#education">Pendidikan</a>
-        </div>
-    </div>
+      <!-- navigation-->
+        <body>
+          <nav class="navigation">
+             <a href="index.html">Home</a>
+             <a href="#about">About</a>
+             <a href="#activitie">Yang saya lakukan</a>
+             <a href="#education">pendidikan</a>
+             <a HREF="PPT.html">PPT</a>
+          </nav>
+        </body>
 
-    <!-- My Name -->
-    <section id="Judul">
-        <h1>Hansen Ferdinando Yosua Pontoh</h1>
-    </section>
+      <!-- Titik Tiga Navigasi -->
+        <div class="navbar">
+          <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+          <div class="menu" id="menu">
+              <a href="#about">About Me</a>
+              <a href="#activities">Yang Saya Lakukan</a>
+              <a href="#education">Pendidikan</a>
+              <a HREF="PPT.html">PPT</a>
+           </div>
+       </div>
 
-    <!-- Section About Me -->
-    <section id="about">
-        <h1>About Me</h1>
-        <p>Nama saya Hansen Ferdinando Yosua Pontoh Biasanya di panggil Hansen, sekarang umur saya 16 tahun Saat ini saya masih menjalani 
-            pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya, saya memiliki beberapa
-        keterampilan dan keahilan antara lain Pengembangan Web: HTML, CSS, dan JavaScript Fotography vidiography: Cameramen dan vidio editor
-        Musik: Menguasai beberapa alat musik saxophone dan gitar saya juga aktiv dalam kegiatan oganisasi dan Kegiatan Ekstrakurikuler
-        aktif dalam organisai PD(persekutuan doa) sekolah di bidang Pemusik dan exkstrakulikuler basket</p>
-    </section>
+      <!-- My Name -->
+       <section id="Judul">
+           <h1>Hansen Ferdinando Yosua Pontoh</h1>
+       </section>
 
-    <!-- Gambar Lucu -->
-    <div class="fun-image-container">
-        <img src="fun-image.png" alt="Gambar Lucu" class="fun-image"> <!-- Ganti dengan jalur gambar lucu Anda -->
-    </div>
+      <!-- Section About Me -->
+       <section id="about">
+         <h1>About Me</h1>
+         <p>Nama saya Hansen Ferdinando Yosua Pontoh Biasanya di panggil Hansen, sekarang umur saya 16 tahun Saat ini saya masih menjalani 
+             pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya, saya memiliki beberapa
+             keterampilan dan keahilan antara lain Pengembangan Web: HTML, CSS, dan JavaScript Fotography vidiography: Cameramen dan vidio editor
+             Musik: Menguasai beberapa alat musik saxophone dan gitar saya juga aktiv dalam kegiatan oganisasi dan Kegiatan Ekstrakurikuler
+             aktif dalam organisai PD(persekutuan doa) sekolah di bidang Pemusik dan exkstrakulikuler basket
+            </p>
+       </section>
+
+      <!-- Gambar Lucu -->
+       <div class="fun-image-container">
+          <img src="fun-image.png" alt="Gambar Lucu" class="fun-image">
+       </div>
 
 
-    <!-- Section Yang Saya Lakukan -->
-    <section id="activities">
-        <h1>Yang Saya Lakukan</h1>
-        <p>Saat ini banyak yang sedang say lakukan salah satunya adalah project membuat website ini. saya juga ada project membuat short film
-            Yang berjudul "Sad Boy" yang nanti akan di upload satu youtube yang memang belum saya buat jadi Coming soon yaaa
-        </p>
-    </section>
+      <!-- Section Yang Saya Lakukan -->
+       <section id="activities">
+         <h1>Yang Saya Lakukan</h1>
+          <p>Saat ini banyak yang sedang say lakukan salah satunya adalah project membuat website ini. saya juga ada project membuat short film
+              Yang berjudul "Sad Boy" yang nanti akan di upload satu youtube yang memang belum saya buat jadi Coming soon yaaa
+          </p>
+       </section>
 
-    <!-- Section Pendidikan -->
-    <section id="education">
+      <!-- Section Pendidikan -->
+       <section id="education">
         <h1>Pendidikan</h1>
-        <p>pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya dan saya mengambil konsentrasi keahlihan
-        TKJ ( teknik komputer jaringan) yang mengajarkan Hardware Software Jaringan dll salah satu skill yang saya dapatkan ya membuat website 
-    ini kalau mau belajar lebih lanjut bisa lihat PPT ini </p>
-    </section>
-    <div class="pdf-container"></div>
-    <h1>Konfigurasi remote server</h1>
-  <iframe src="Konfigurasi_Remote_Server.pdf" width="100%" height="600px">
-    </iframe>
-        <h1>Konfigurasi FTP server</h1>
-        <iframe src="KONFIGURASI_FTP_SERVER.pdf" width="100%" height="600px">
-          This browser does not support PDFs. Please download the PDF to view it: <a href="your-presentation.pdf">Download PDF</a>.
-        </iframe>
-    </div>
-    
-</body>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('show');
-        }
-    </script>
-</body>
+          <p>pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya dan saya mengambil konsentrasi keahlihan
+             TKJ ( teknik komputer jaringan) yang mengajarkan Hardware Software Jaringan dll salah satu skill yang saya dapatkan ya membuat website 
+             ini kalau mau belajar lebih lanjut bisa lihat PPT ini 
+             <center><a href="PPT.html" class="button">PPT</a>
+             </center>
+         </p>
+       </section>
+           <script>
+              function toggleMenu() {
+              var menu = document.getElementById('menu');
+              menu.classList.toggle('show');
+              }
+          </script>
+      </body>
+  </body>
 </html>
 <style>
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
      .navigation {
       display: flex;
       flex-flow: row wrap;
@@ -237,4 +241,23 @@ section {
         width: 70%
       }
     }
+    .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ffc1f0;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ffa5e8;
+}
+
+
 </style>
