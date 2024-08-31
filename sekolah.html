@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Anda - Page 2</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        /* Animasi fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animasi slide-up */
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Gaya navigasi */
+        .navigation {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            background-color: #ffffff;
+            padding: 15px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #f9aaff;
+            padding: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #ff97fd;
+            transform: scale(1.1); /* Efek zoom saat di-hover */
+        }
+
+        /* Medium screens */
+        @media all and (max-width: 800px) {
+            .navigation {
+                justify-content: space-around;
+            }
+        }
+
+        /* Small screens */
+        @media all and (max-width: 500px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Reset margin and padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background color and text color */
+        body {
+            background: linear-gradient(to right, #ffb2f6, #f04aff);
+            background-color: #ffa3f3;
+            color: white;
+            text-align: center;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.4); /* Opacity 40% */
+            border-radius: 7px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            color: white;
+        }
+
+        .menu {
+            display: none; /* Hide menu by default */
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* Opacity 40% */
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Show the menu when 'show' class is added */
+        .menu.show {
+            display: block;
+        }
+
+        /* Section styling */
+        section {
+            border: 2px solid #ffffff; /* Bingkai putih di sekitar section */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lembut di sekitar section */
+            max-width: 800px; /* Batasi lebar kontainer */
+            margin: 20px auto; /* Pusatkan kontainer dan beri margin atas-bawah */
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Latarnya transparan */
+            border-radius: 8px; /* Sudut membulat */
+            animation: fadeIn 1.5s ease-out, slideUp 1s ease-out; /* Animasi saat muncul */
+        }
+
+        p {
+            max-height: 150px; /* Batasi tinggi teks */
+            overflow-y: auto; /* Tambahkan scrollbar vertikal jika diperlukan */
+            text-align: justify; /* Rata kiri-kanan */
+        }
+
+        a {
+            color: lightblue; /* Warna tautan */
+            text-decoration: none; /* Hapus garis bawah pada tautan */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Garis bawah saat tautan dihover */
+        }
+    </style>
+</head>
+<body style="background-image: url('background.jpg');">
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <a href="index.html">Home</a> <!-- Link back to index.html -->
+        <a href="portofolio.html">Portofolio</a>
+        <a href="games.html">Games section</a>
+    </nav>
+
+    <!-- Titik Tiga Navigasi -->
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+        <div class="menu" id="menu">
+            <a href="#ppt">PPT Section</a>
+        </div>
+    </div>    
+
+    <!-- Section PPT -->
+    <section id="ppt">
+        <h1>Konfigurasi Remote Server</h1>
+        <iframe src="Konfigurasi_Remote_Server.pdf" width="100%" height="600px"></iframe>
+        
+        <h1>Konfigurasi FTP Server</h1>
+        <iframe src="KONFIGURASI_FTP_SERVER.pdf" width="100%" height="600px">
+            This browser does not support PDFs. Please download the PDF to view it: <a href="assets/KONFIGURASI_FTP_SERVER.pdf">Download PDF</a>.
+        </iframe>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>
