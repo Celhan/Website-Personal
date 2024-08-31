@@ -1,123 +1,139 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nama Anda</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body style="background-image: url('background.jpg');">
+</head>
+<body style="background-image: url('background.jpg');">
 
-      <!-- navigation-->
-        <body>
-          <nav class="navigation">
-             <a href="index.html">Home</a>
-             <a href="portofolio.html">portofilio</a>
-             <a HREF="PPT.html">PPT</a>
-             <a href="games.html">Games section</a>
-          </nav>
-        </body>
+    <!-- navigation-->
+    <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="portofolio.html">Portofolio</a>
+        <a href="sekolah.html">School documentation</a>
+        <a href="PPT.html">PPT</a>
+        <a href="games.html">Games section</a>
+    </nav>
 
-      <!-- Titik Tiga Navigasi -->
-        <div class="navbar">
-          <div class="menu-icon" onclick="toggleMenu()">⋮</div>
-          <div class="menu" id="menu">
-              <a href="#about">About Me</a>
-              <a href="#activities">Yang Saya Lakukan</a>
-              <a href="#education">Pendidikan</a>
-           </div>
-       </div>
+    <!-- Titik Tiga Navigasi -->
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+        <div class="menu" id="menu">
+            <a href="#about">About Me</a>
+            <a href="#activities">Yang Saya Lakukan</a>
+            <a href="#education">Pendidikan</a>
+        </div>
+    </div>
 
-      <!-- My Name -->
-       <section id="Judul">
-           <h1>Hansen Ferdinando Yosua Pontoh</h1>
-       </section>
+    <!-- My Name -->
+    <section id="Judul" class="fade-in">
+        <h1>Hansen Ferdinando Yosua Pontoh</h1>
+    </section>
 
-      <!-- Section About Me -->
-       <section id="about">
-         <h1>About Me</h1>
-         <p>Nama saya Hansen Ferdinando Yosua Pontoh Biasanya di panggil Hansen, sekarang umur saya 16 tahun Saat ini saya masih menjalani 
-             pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya, saya memiliki beberapa
-             keterampilan dan keahilan antara lain Pengembangan Web: HTML, CSS, dan JavaScript Fotography vidiography: Cameramen dan vidio editor
-             Musik: Menguasai beberapa alat musik saxophone dan gitar saya juga aktiv dalam kegiatan oganisasi dan Kegiatan Ekstrakurikuler
-             aktif dalam organisai PD(persekutuan doa) sekolah di bidang Pemusik dan exkstrakulikuler basket
-            </p>
-       </section>
+    <!-- Section About Me -->
+    <section id="about" class="slide-up">
+        <h1>About Me</h1>
+        <p>Nama saya Hansen Ferdinando Yosua Pontoh Biasanya di panggil Hansen, sekarang umur saya 16 tahun Saat ini saya masih menjalani pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya, saya memiliki beberapa keterampilan dan keahlian antara lain Pengembangan Web: HTML, CSS, dan JavaScript Fotografi videografi: Cameramen dan video editor Musik: Menguasai beberapa alat musik saxophone dan gitar saya juga aktif dalam kegiatan organisasi dan Kegiatan Ekstrakurikuler aktif dalam organisasi PD(persekutuan doa) sekolah di bidang Pemusik dan ekstrakurikuler basket</p>
+    </section>
 
-      <!-- Gambar Lucu -->
-       <div class="fun-image-container">
-          <img src="image.png" alt="Gambar Lucu" class="fun-image">
-       </div>
+    <!-- Gambar Lucu -->
+    <div class="fun-image-container slide-up">
+        <img src="image.png" alt="Gambar Lucu" class="fun-image">
+    </div>
 
+    <!-- Section Yang Saya Lakukan -->
+    <section id="activities" class="fade-in">
+        <h1>Yang Saya Lakukan</h1>
+        <p>Saat ini banyak yang sedang saya lakukan salah satunya adalah project membuat website ini. saya juga ada project membuat short film yang berjudul "Sad Boy" yang nanti akan di upload satu youtube yang memang belum saya buat jadi Coming soon yaaa</p>
+    </section>
 
-      <!-- Section Yang Saya Lakukan -->
-       <section id="activities">
-         <h1>Yang Saya Lakukan</h1>
-          <p>Saat ini banyak yang sedang say lakukan salah satunya adalah project membuat website ini. saya juga ada project membuat short film
-              Yang berjudul "Sad Boy" yang nanti akan di upload satu youtube yang memang belum saya buat jadi Coming soon yaaa
-          </p>
-       </section>
-
-      <!-- Section Pendidikan -->
-       <section id="education">
+    <!-- Section Pendidikan -->
+    <section id="education" class="slide-up">
         <h1>Pendidikan</h1>
-          <p>pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya dan saya mengambil konsentrasi keahlihan
-             TKJ ( teknik komputer jaringan) yang mengajarkan Hardware Software Jaringan dll salah satu skill yang saya dapatkan ya membuat website 
-             ini kalau mau belajar lebih lanjut bisa lihat PPT ini 
-             <center><a href="PPT.html" class="button">PPT</a>
-             </center>
-         </p>
-       </section>
-           <script>
-              function toggleMenu() {
-              var menu = document.getElementById('menu');
-              menu.classList.toggle('show');
-              }
-          </script>
-      </body>
-  </body>
+        <p>Pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya dan saya mengambil konsentrasi keahlian TKJ (teknik komputer jaringan) yang mengajarkan Hardware Software Jaringan dll salah satu skill yang saya dapatkan ya membuat website ini kalau mau belajar lebih lanjut bisa lihat PPT ini 
+            <center><a href="PPT.html" class="button">PPT</a></center>
+        </p>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
 </html>
 <style>
+/* Animasi CSS */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.slide-up {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 body {
     background-image: url('background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-     .navigation {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      background-color: #ffffff;
-      padding: 15px;
-    }
 
-    .navigation a {
-      text-decoration: none;
-      color: #f9aaff;
-      padding: 10px;
-      transition: color 0.3s ease;
-    }
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    padding: 15px;
+}
 
-    .navigation a:hover {
-      color: #ff97fd;
-    }
+.navigation a {
+    text-decoration: none;
+    color: #f9aaff;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
-    /* Medium screens */
-    @media all and (max-width: 800px) {
-      .navigation {
+.navigation a:hover {
+    color: #ff97fd;
+    transform: scale(1.1);
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+    .navigation {
         justify-content: space-around;
-      }
     }
+}
 
-    /* Small screens */
-    @media all and (max-width: 500px) {
-      .navigation {
+/* Small screens */
+@media all and (max-width: 500px) {
+    .navigation {
         flex-direction: column;
         align-items: center;
-      }
     }
+}
+
 /* Reset margin and padding */
 body, html {
     margin: 0;
@@ -143,7 +159,6 @@ body {
     padding: 10px;
     cursor: pointer;
 }
-
 
 .menu-icon {
     font-size: 24px;
@@ -174,31 +189,31 @@ body {
 
 /* Section styling */
 section {
-            border: 2px solid #ffffff; /* Bingkai putih di sekitar section */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lembut di sekitar section */
-            max-width: 800px; /* Batasi lebar kontainer */
-            margin: 20px auto; /* Pusatkan kontainer dan beri margin atas-bawah */
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5); /* Latarnya transparan */
-            border-radius: 8px; /* Sudut membulat */
-        }
+    border: 2px solid #ffffff; /* Bingkai putih di sekitar section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan lembut di sekitar section */
+    max-width: 800px; /* Batasi lebar kontainer */
+    margin: 20px auto; /* Pusatkan kontainer dan beri margin atas-bawah */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Latarnya transparan */
+    border-radius: 8px; /* Sudut membulat */
+}
 
-        p {
-            max-height: 150px; /* Batasi tinggi teks */
-            overflow-y: auto; /* Tambahkan scrollbar vertikal jika diperlukan */
-            text-align: justify; /* Rata kiri-kanan */
-        }
+p {
+    max-height: 150px; /* Batasi tinggi teks */
+    overflow-y: auto; /* Tambahkan scrollbar vertikal jika diperlukan */
+    text-align: justify; /* Rata kiri-kanan */
+}
 
-        a {
-            color: lightblue; /* Warna tautan */
-            text-decoration: none; /* Hapus garis bawah pada tautan */
-        }
+a {
+    color: lightblue; /* Warna tautan */
+    text-decoration: none; /* Hapus garis bawah pada tautan */
+}
 
-        a:hover {
-            text-decoration: underline; /* Garis bawah saat tautan dihover */
-        }
-   
-    /* Gambar Lucu */
+a:hover {
+    text-decoration: underline; /* Garis bawah saat tautan dihover */
+}
+
+/* Gambar Lucu */
 .fun-image-container {
     margin: 20px auto;
     text-align: center;
@@ -225,21 +240,23 @@ section {
         width: 80px;
     }
 }
-.pdf-container {
-      width: 90%; /* Lebar kontainer untuk perangkat kecil */
-      max-width: 500px; /* Lebar maksimum kontainer */
-      height: 60vh; /* Tinggi kontainer untuk perangkat kecil */
-      margin: 0 auto; /* Pusatkan kontainer */
-    }
 
-    @media (min-width: 768px) {
-      .pdf-container {
+.pdf-container {
+    width: 90%; /* Lebar kontainer untuk perangkat kecil */
+    max-width: 500px; /* Lebar maksimum kontainer */
+    height: 60vh; /* Tinggi kontainer untuk perangkat kecil */
+    margin: 0 auto; /* Pusatkan kontainer */
+}
+
+@media (min-width: 768px) {
+    .pdf-container {
         height: 80vh; /* Tinggi kontainer untuk perangkat besar */
         max-width: 500px;
-        width: 70%
-      }
+        width: 70%;
     }
-    .button {
+}
+
+.button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -256,6 +273,4 @@ section {
 .button:hover {
     background-color: #ffa5e8;
 }
-
-
 </style>
