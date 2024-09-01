@@ -23,6 +23,8 @@
         <div class="menu-icon" onclick="toggleMenu()">⋮</div>
         <div class="menu" id="menu">
             <a href="#about">About Me</a>
+            <a href="#p">Penjelasan WEB</a>
+            <a href="#card">Bagian WEB</a>
             <a href="#activities">Yang Saya Lakukan</a>
             <a href="#education">Pendidikan</a>
         </div>
@@ -38,6 +40,70 @@
         <h1>About Me</h1>
         <p>Nama saya Hansen Ferdinando Yosua Pontoh Biasanya di panggil Hansen, sekarang umur saya 16 tahun Saat ini saya masih menjalani pendidikan di <a href="https://pppkpetra.sch.id/sekolah-menengah-atas/">SMK Kristen Petra</a> Surabaya, saya memiliki beberapa keterampilan dan keahlian antara lain Pengembangan Web: HTML, CSS, dan JavaScript Fotografi videografi: Cameramen dan video editor Musik: Menguasai beberapa alat musik saxophone dan gitar saya juga aktif dalam kegiatan organisasi dan Kegiatan Ekstrakurikuler aktif dalam organisasi PD(persekutuan doa) sekolah di bidang Pemusik dan ekstrakurikuler basket</p>
     </section>
+
+    <!-- penjelasan WEB -->
+    <section id="p">
+        <h1>Penjelasan WEB</h1>
+        <p>WEB ini saya buat pertujuan untuk memudah saya membuka file file saya dan juga mengarsipkan seperti portofolio agar jika ada yang meminta data diri saya, saya bisa
+            bisa memberikan WEB site ini 
+        </p>
+    </section>
+
+    <section id="card" class="slide-up"
+    <center><h1>di Bawah merupakan bagian - bagian utama dari website saya</h1></center>
+    </section>
+
+    <!-- Card Section -->
+        <div class="card-container">
+            <div class="card">
+                <img src="portofolio.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title placeholder-glow">portofolio
+                        <span class="placeholder col-6"></span>
+                    </h5>
+                    <p class="card-text placeholder-glow">dalam portofolio ini menjelaskan tentang saya dan skill yang saya miliki
+                        <span class="placeholder col-7"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-6"></span>
+                        <span class="placeholder col-8"></span>
+                    </p>
+                    <a href="portofolio.html" class="btn btn-primary">Lihat Selengkapnya</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="sekolah.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title placeholder-glow">school documentation
+                        <span class="placeholder col-6"></span>
+                    </h5>
+                    <p class="card-text placeholder-glow">menyimpan data data sekolah saya seperti ppt dan kegiatan yang saya lakukan
+                        <span class="placeholder col-7"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-6"></span>
+                        <span class="placeholder col-8"></span>
+                    </p>
+                    <a href="sekolah.html" class="btn btn-primary">Lihat Selengkapnya</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="ppt.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title placeholder-glow">PPT
+                        <span class="placeholder col-6"></span>
+                    </h5>
+                    <p class="card-text placeholder-glow">PPT merupakan contoh ppt yang di berikan oleh sekolah (dari guru)
+                        <span class="placeholder col-7"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-4"></span>
+                        <span class="placeholder col-6"></span>
+                        <span class="placeholder col-8"></span>
+                    </p>
+                    <a href="PPT.html" class="btn btn-primary">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div>
 
     <!-- Gambar Lucu -->
     <div class="fun-image-container slide-up">
@@ -97,8 +163,16 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background: linear-gradient(to right, #ffb2f6, #f04aff);
+    background-color: #ffa3f3;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
+/* Navigation styling */
 .navigation {
     display: flex;
     flex-flow: row wrap;
@@ -132,21 +206,6 @@ body {
         flex-direction: column;
         align-items: center;
     }
-}
-
-/* Reset margin and padding */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Background color and text color */
-body {
-    background: linear-gradient(to right, #ffb2f6, #f04aff);
-    background-color: #ffa3f3;
-    color: white;
-    text-align: center;
 }
 
 /* Navbar styling */
@@ -235,12 +294,71 @@ a:hover {
     section {
         padding: 60px 10px;
     }
-
-    .runner {
-        width: 80px;
-    }
 }
 
+/* Card styling */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Jarak antar kartu */
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff; /* Warna latar belakang kartu */
+    border-radius: 12px; /* Sudut membulat yang lebih besar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan yang lebih lembut */
+    margin: 10px;
+    max-width: 300px; /* Lebar maksimum kartu */
+    flex: 1 1 300px; /* Fleksibilitas ukuran kartu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 12px; /* Sudut membulat di bagian atas */
+    border-top-right-radius: 12px; /* Sudut membulat di bagian atas */
+}
+
+.card-body {
+    padding: 15px; /* Jarak di dalam kartu */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Ukuran font judul */
+    margin-bottom: 10px; /* Jarak bawah judul */
+    color: #333; /* Warna teks judul */
+}
+
+.card-text {
+    font-size: 1rem; /* Ukuran font deskripsi */
+    color: #555; /* Warna teks deskripsi */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover */
+}
+
+.btn-primary {
+    background-color: #f04aff; /* Warna latar belakang tombol */
+    border: none;
+    border-radius: 8px; /* Sudut membulat tombol */
+    color: #ffffff; /* Warna teks tombol */
+    padding: 10px 20px; /* Jarak dalam tombol */
+    font-size: 1rem; /* Ukuran font tombol */
+    text-decoration: none; /* Hapus garis bawah */
+    display: inline-block; /* Agar tombol tidak mengambil lebar penuh */
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e03e9e; /* Warna latar belakang saat hover */
+}
+
+/* PDF container */
 .pdf-container {
     width: 90%; /* Lebar kontainer untuk perangkat kecil */
     max-width: 500px; /* Lebar maksimum kontainer */
@@ -256,11 +374,12 @@ a:hover {
     }
 }
 
+/* Button styling */
 .button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: #ffc1f0;
     text-decoration: none;
     border-radius: 5px;
