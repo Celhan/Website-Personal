@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <title>Contoh PPT</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nama Anda - Page 2</title>
     <link rel="stylesheet" href="assets/style.css">
     <style>
-        /* Animasi fade-in */
-        @keyframes fadeIn {
+           /* Animasi fade-in */
+           @keyframes fadeIn {
             from {
                 opacity: 0;
             }
@@ -29,12 +30,128 @@
             }
         }
 
+        /* Navigation styling */
+        .navigation {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            background-color: #ffb6c1; /* Light pink */
+            padding: 15px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #000000;
+            padding: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navigation a:hover {
+            color: #000000;
+            transform: scale(1.1);
+        }
+
+        /* Medium screens */
+        @media all and (max-width: 800px) {
+            .navigation {
+                justify-content: space-around;
+            }
+        }
+
+        /* Small screens */
+        @media all and (max-width: 500px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Reset margin and padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background color and text color */
+        body {
+            background: linear-gradient(to right, #ffc1e3, #ffb6c1); /* Gradient light pink */
+            background-color: #ffc1e3;
+            color: white;
+            text-align: center;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #ffb6c1; /* Slight opacity */
+            border-radius: 7px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            color: black;
+        }
+
+        .menu {
+            display: none; /* Hide menu by default */
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: #ffb6c1; /* Slight opacity */
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Show the menu when 'show' class is added */
+        .menu.show {
+            display: block;
+        }
+
+        /* Section styling */
+        section {
+            border: 2px solid #ffffff; /* White border around section */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow around section */
+            max-width: 800px; /* Limit the width of container */
+            margin: 20px auto; /* Center container and add top-bottom margin */
+            padding: 20px;
+            background: rgba(255, 182, 193, 0.8); /* Transparent light pink background */
+            border-radius: 8px; /* Rounded corners */
+            animation: fadeIn 1.5s ease-out, slideUp 1s ease-out; /* Animation */
+        }
+
+        p {
+            max-height: 150px; /* Limit the height of text */
+            overflow-y: auto; /* Add vertical scrollbar if needed */
+            text-align: justify; /* Justify text */
+        }
+
+        a {
+            color: lightblue; /* Link color */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline when hovered */
+        }
+
    /* Navigation styling */
 .navigation {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    background-color: #A6A6A6;
+    background-color: #ffcccb;
     padding: 15px;
 }
 
@@ -74,9 +191,9 @@
 
         /* Background color and text color */
         body {
-            background: linear-gradient(to right, #ffb2f6, #f04aff);
-            background-color: #ffa3f3;
-            color: white;
+            background: linear-gradient(to right, #ffe4e1, #ffe4e1);
+            background-color: #ffe4e1;
+            color: black;
             text-align: center;
         }
 
@@ -85,7 +202,7 @@
             position: fixed;
             top: 10px;
             right: 10px;
-            background-color: rgba(0, 0, 0, 0.4); /* Opacity 40% */
+            background-color: #ffcccb; /* Opacity 40% */
             border-radius: 7px;
             padding: 10px;
             cursor: pointer;
@@ -93,7 +210,7 @@
 
         .menu-icon {
             font-size: 24px;
-            color: white;
+            color: black;
         }
 
         .menu {
@@ -101,13 +218,13 @@
             position: absolute;
             top: 40px;
             right: 0;
-            background-color: rgba(0, 0, 0, 0.4); /* Opacity 40% */
+            background-color: #ffb6c1; /* Opacity 40% */
             border-radius: 5px;
             padding: 10px;
         }
 
         .menu a {
-            color: white;
+            color: black;
             text-decoration: none;
             display: block;
             margin-bottom: 10px;
@@ -125,7 +242,7 @@
             max-width: 800px; /* Batasi lebar kontainer */
             margin: 20px auto; /* Pusatkan kontainer dan beri margin atas-bawah */
             padding: 20px;
-            background: rgba(0, 0, 0, 0.5); /* Latarnya transparan */
+            background: rgba(255, 182, 193, 0.8); /* Latarnya transparan */
             border-radius: 8px; /* Sudut membulat */
             animation: fadeIn 1.5s ease-out, slideUp 1s ease-out; /* Animasi saat muncul */
         }
